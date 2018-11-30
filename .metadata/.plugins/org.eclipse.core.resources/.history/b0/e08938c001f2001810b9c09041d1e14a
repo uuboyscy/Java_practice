@@ -1,0 +1,29 @@
+
+public class TimeConvert {
+
+	public static String milliSecToHMS(long sin){
+		
+		// h, m, s, millis;
+		long[] t = new long[4];
+		String result = "";
+		
+		t[0] = sin%1000;
+		sin /= 1000;
+		
+		for(int i = 1 ; i < t.length ; i++) {
+			t[i] = sin%60;
+			sin /= 60;
+		}		
+		
+		for(int i = 3 ; i >=0 ; i--) result += t[i];
+		return result ;
+	}
+	
+	public static String secToHMS(long s){
+		
+		
+		
+		return "";
+	}
+	
+} // ned of class

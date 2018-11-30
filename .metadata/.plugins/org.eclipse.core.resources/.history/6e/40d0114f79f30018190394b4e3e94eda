@@ -1,0 +1,27 @@
+import java.io.*;
+
+public class CopyFile {
+
+	public static void main(String[] args) {
+		File cpFile = new File(args[0]);
+		File rnFile = new File(args[1]);
+		
+		try {
+			BufferedReader in = new BufferedReader(new FileReader(cpFile));
+			StringBuilder sb = new StringBuilder(256);
+			//BufferedReader in2 = new BufferedReader(new InputStreamReader(System.in));;
+			PrintWriter out = new PrintWriter(new FileWriter(rnFile));
+			String str;
+			while((str = in.readLine()) != null)
+				sb.append(str).append("\n\r");
+			System.out.print(sb);
+			out.print(sb);
+			in.close();
+			out.close();
+			
+		}catch(IOException e) {e.printStackTrace();}
+		
+
+	} // end of main
+
+}

@@ -1,0 +1,23 @@
+import java.io.*;
+import java.util.*;
+
+
+public class ReadFile {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		String f = scanner.next();
+		File file = new File(f);
+		
+		try {
+			BufferedReader in = new BufferedReader(new FileReader(file));
+		}catch(IOException e) {e.printStackTrace();}
+				
+				
+				
+		scanner.close();
+				
+	} // end of main
+
+} // end of class

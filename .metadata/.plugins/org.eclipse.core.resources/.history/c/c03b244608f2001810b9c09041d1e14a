@@ -1,0 +1,39 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
+
+public class DateFormatDemo {
+
+	public static void main(String[] args) {
+		
+		long start = new java.util.Date().getTime();
+		long start1 = System.currentTimeMillis();
+		
+		Calendar cal = new GregorianCalendar(1985, Calendar.APRIL, 8);
+		//System.out.println(cal);
+		System.out.println(cal.getWeekYear());
+		
+		Date myDate = cal.getTime();
+		int c_year = cal.get(Calendar.YEAR)-1911;
+		DateFormat df1 = DateFormat.getDateInstance();
+		SimpleDateFormat df2 = new SimpleDateFormat("yyyy/MM/dd");
+		SimpleDateFormat df3 = new SimpleDateFormat("¦~M¤ëd¤é");
+		
+		System.out.println(df1.format(myDate));
+		System.out.println(df2.format(myDate));
+		System.out.println(c_year + df3.format(myDate));
+		
+		long end = new java.util.Date().getTime();
+		long end1 = System.currentTimeMillis();
+		
+		System.out.println(end - start);
+		System.out.println(end1 - start1);
+		
+		long t = 922337203548677L;
+		
+		System.out.println(TimeConvert.milliSecToHMS(t));
+		System.out.println(TimeConvert.secToHMS(t/1000));
+		
+	} // end of main
+
+} // end of class

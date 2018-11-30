@@ -1,0 +1,13 @@
+import java.util.Calendar;
+
+public class DateDemo {
+
+	public static void main(String[] args) {
+		
+		Calendar taday = Calendar.getInstance();
+		System.out.println(Calendar.getInstance());
+		
+
+	} // end of main
+
+} // end of class

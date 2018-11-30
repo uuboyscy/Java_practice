@@ -1,0 +1,15 @@
+import java.util.*;
+
+public class DateDemo {
+
+	public static void main(String[] args) {
+		
+		Calendar today1 = Calendar.getInstance();
+		System.out.println(today1);
+		
+		Date today2 = new Date();
+		System.out.println(today2);
+
+	} // end of main
+
+} // end of class

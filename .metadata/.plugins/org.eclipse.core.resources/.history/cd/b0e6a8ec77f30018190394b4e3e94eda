@@ -1,0 +1,16 @@
+import java.io.*;
+
+public class CopyFile {
+
+	public static void main(String[] args) {
+		File cpFile = new File(args[0]);
+		File rnFile = new File(args[1]);
+		
+		try {
+			BufferedReader in = new BufferedReader(new FileReader(cpFile));
+			
+		}
+
+	} // end of main
+
+}

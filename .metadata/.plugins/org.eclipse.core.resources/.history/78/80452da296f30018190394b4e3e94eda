@@ -1,0 +1,19 @@
+package Practice;
+
+import java.io.*;
+
+public class KeyboardInput {
+
+	public static void main(String[] args) {
+		
+		String str;
+		BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder sb = new StringBuilder(256);
+		try {
+			while(!(str = in.readLine()).equals(""))
+				sb.append(str).append("\n");
+		}catch(IOException e) {e.printStackTrace();}
+
+	} // end of main
+
+}
